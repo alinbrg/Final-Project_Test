@@ -11,7 +11,9 @@ import static com.codeborne.selenide.Selenide.$$;
 public class SearchFilteredItemsPage {
     protected SelenideElement
         noResults = $(byText("სამწუხაროდ, ვერაფერი მოიძებნა")),
-        location = $(by("name", "LocID")),
+        locationInput = $(by("name", "LocID")),
+        locationTextBox = $(".cat-atr.mb-24px .sg-selectbox__value-container"),
+        locationList = locationTextBox.$(".sg-selectbox__menu"),
         priceFrom = $(by("name", "PriceFrom")),
         priceTo = $(by("name", "PriceTo")),
         goToCart = $(by("href", "/ka/mycart")),

@@ -2,9 +2,13 @@ package StepObjects;
 
 import PageObjects.SearchFilteredItemsPage;
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Step;
 
+import jxl.read.biff.BiffException;
 import org.testng.Assert;
+
+import java.io.IOException;
 
 import static StepObjects.StaticClasses.*;
 
@@ -64,11 +68,14 @@ public class SearchFilteredItemsSteps extends SearchFilteredItemsPage{
         return this;
     }
 
-//    @Step ("select cities")
-//    public SearchFilteredItemsSteps selectCity() throws BiffException, IOException {
-//        location.setValue(cities());
-//        return this;
-//    }
+    @Step ("select cities")
+    public SearchFilteredItemsSteps selectCity() throws BiffException, IOException {
+//        Selenide.executeJavaScript("document.querySelector()")
+        locationTextBox.click();
+        locationList.find(city()[1]).click();
+//        locationInput.setValue(city()[0]);
+        return this;
+    }
     @Step("return to main page")
     public SearchFilteredItemsSteps returnToMain(){
         logo.click();

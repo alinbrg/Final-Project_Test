@@ -1,5 +1,6 @@
 package Utils;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.annotations.AfterTest;
@@ -10,7 +11,7 @@ public class ChromeRunner {
     public static void setup(){
         WebDriverManager.chromedriver().setup();
 //        Configuration.startMaximized = true;
-//        Configuration.browserSize = "";
+//        Configuration.browserSize = "1980x1000";
         Selenide.open("https://www.mymarket.ge/ka/");
     }
 

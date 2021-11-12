@@ -13,15 +13,15 @@ import java.util.Random;
 
 public class StaticClasses {
 
-    @Step("select random elements")
+//    @Step("select random elements")
     public static int selectRandom (ElementsCollection name){
         int maxProducts = name.size();
         int randomElement = (int) Math.floor(Math.random() * maxProducts);
         return randomElement;
     }
     @Test
-    @Step ("get cities from excel")
-    public static String cities() throws IOException, BiffException {
+    @Step ("get cities value from excel")
+    public static String [] city() throws IOException, BiffException {
         String FilePath = "files/cities.xls";
         FileInputStream fs = new FileInputStream(FilePath);
         Workbook wb = Workbook.getWorkbook(fs);
@@ -29,7 +29,11 @@ public class StaticClasses {
         int totalNoOfRows = sheet.getRows();
 //        System.out.println(totalNoOfRows);
         int row = (int) Math.floor(Math.random() * totalNoOfRows);
-        String test = sheet.getCell(0, row).getContents();
-        return test;
+        String value = sheet.getCell(0, row).getContents();
+        String text = sheet.getCell(1, row).getContents();
+        String [] city = {value, text};
+        System.out.println(city);
+        return city;
     }
+
 }
