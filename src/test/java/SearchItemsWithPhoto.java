@@ -17,9 +17,9 @@ public class SearchItemsWithPhoto extends ChromeRunner {
 
     public void searchWithOneImg() {
         SearchItemsWithPhotoSteps steps = new SearchItemsWithPhotoSteps();
-        RegistrationSteps step = new RegistrationSteps();
-        step
-                .closePopup();
+//        RegistrationSteps step = new RegistrationSteps();
+//        step
+//                .closePopup();
         steps
                 .clickOnSearchImgBtn()
                 .uploadImg(imgSrc_1)

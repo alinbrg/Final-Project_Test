@@ -18,7 +18,7 @@ public class MyMarketRegistration extends ChromeRunner {
     public void registrationFillInputFields(){
         RegistrationSteps steps = new RegistrationSteps();
         steps
-                .closePopup()
+//                .closePopup()
                 .goToRegistrationPage()
                 .selectGender(female)
                 .writeEmail(email)
@@ -36,8 +36,8 @@ public class MyMarketRegistration extends ChromeRunner {
     public void registrationWithAllFields(){
         RegistrationSteps steps = new RegistrationSteps();
         steps
-                .closePopup()
-                .goToRegistrationPage()
+//                .closePopup()
+//                .goToRegistrationPage()
                 .selectGender(male)
                 .writeEmail(email)
                 .passwordAndRepeat(password, password)
@@ -57,9 +57,9 @@ public class MyMarketRegistration extends ChromeRunner {
     public void registrationWithWrongPassword(){
         RegistrationSteps steps = new RegistrationSteps();
         steps
-                .closePopup()
-                .goToRegistrationPage()
-                .selectGender(male)
+//                .closePopup()
+//                .goToRegistrationPage()
+                .selectGender(female)
                 .writeEmail(email)
                 .writePhoneNumber(realPhoneNumber)
                 .checkAgreeBtns()

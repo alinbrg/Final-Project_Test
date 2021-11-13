@@ -19,9 +19,9 @@ public class SearchFilteredItems extends ChromeRunner{
             "if not delete selectors")
 
     public void searchFilteredResults() {
-        RegistrationSteps step = new RegistrationSteps();
-        step
-                .closePopup();
+//        RegistrationSteps step = new RegistrationSteps();
+//        step
+//                .closePopup();
         SearchFilteredItemsSteps steps = new SearchFilteredItemsSteps();
         steps
                 .selectCategory()
