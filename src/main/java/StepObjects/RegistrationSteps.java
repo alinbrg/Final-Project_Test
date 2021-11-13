@@ -29,7 +29,7 @@ public class RegistrationSteps extends RegistrationPage {
         gender.get(indexOfGender).click();
         return this;
     }
-    @Step ("write email, value {email}")
+    @Step ("write email, value {emailAddress}")
     public RegistrationSteps writeEmail(String emailAddress){
         email.setValue(emailAddress);
         return this;
