@@ -39,14 +39,14 @@ public class SearchFilteredItems extends ChromeRunner{
     @Severity(SeverityLevel.NORMAL)
     @Description("Search Items with min and max price")
     public void setPriceRange() throws BiffException, IOException {
-        RegistrationSteps step = new RegistrationSteps();
-        step
-                .closePopup();
+//        RegistrationSteps step = new RegistrationSteps();
+//        step
+//                .closePopup();
         SearchFilteredItemsSteps steps = new SearchFilteredItemsSteps();
         steps
                 .returnToMain()
                 .selectCategory()
-                .selectCity()
+//                .selectCity()
                 .setPriceRange("100", "1000")
                 .addToCart()
                 .checkCart();
