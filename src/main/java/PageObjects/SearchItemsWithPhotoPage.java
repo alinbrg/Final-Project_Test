@@ -21,6 +21,6 @@ public class SearchItemsWithPhotoPage {
         goToFavourites = $(by("href", "/ka/favorites"));
 
     protected ElementsCollection
-        resultBlocks = $$(".card-col"),
+        resultBlocks = $$(".card-col a"),
         favouriteItemsList = $(".favorites-cards").$$(".cards");
 }
